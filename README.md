@@ -1,5 +1,7 @@
 ## ESP32
 
+ESP32 simulate JoyCon,Pro Controller,Amiibo for Nintendo Switch
+
 通过ESP32来模拟 Joy-Con和Pro Controller，实现伊机控自动脚本，使用EasyConAPI，兼容所有伊机控衍生版本。
 
 ![image-20220914002841981](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202209140028015.png)
