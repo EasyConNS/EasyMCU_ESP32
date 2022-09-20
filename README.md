@@ -58,7 +58,7 @@ ESP32建议购买ESP32-WROOM-32、ESP32-WROOM-32E、ESP32-WROOM-32D，任何使�
 - Wemos Oled （自带屏幕）
 - TTGO T8（可以插SD卡）
 - D1 LOLIN32
-
+- 源地 ESP32
 
 
 #### 有点小问题的
