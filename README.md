@@ -11,7 +11,7 @@ ESP32 simulate JoyCon,Pro Controller,Amiibo for Nintendo Switch
 - 发包频率，最高50Hz
 - 支持更换手柄颜色
 - 支持更换手柄
-- 支持Amiibo，10个永久存储，可更换
+- 支持Amiibo，20个永久存储，可更换
 - 一次配对，永久重连
 - 支持断连自动重连
 
@@ -58,7 +58,7 @@ ESP32建议购买ESP32-WROOM-32、ESP32-WROOM-32E、ESP32-WROOM-32D，任何使�
 - Wemos Oled （自带屏幕）
 - TTGO T8（可以插SD卡）
 - D1 LOLIN32
-- 源地 ESP32
+
 
 
 #### 有点小问题的
@@ -97,7 +97,9 @@ ESP32建议购买ESP32-WROOM-32、ESP32-WROOM-32E、ESP32-WROOM-32D，任何使�
 
 如图烧写
 
-![image-20220911091755375](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202209110917406.png)
+![image-20221004034600466](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202210040346519.png)
+
+有屏幕和无屏幕都是同一个固件，自动识别的
 
 
 
@@ -139,7 +141,7 @@ ESP32建议购买ESP32-WROOM-32、ESP32-WROOM-32E、ESP32-WROOM-32D，任何使�
 
 手柄模式选择以后，设置，断电重启ESP32，就能看到对应的手柄了
 
-![image-20220914001357138](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202209140014214.png)
+![image-20221004034633382](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202210040346427.png)
 
 手柄颜色请先点击对应的位置，选好颜色以后，再设置，断电重启ESP32，就能看到对应的手柄了
 
@@ -151,11 +153,11 @@ ESP32建议购买ESP32-WROOM-32、ESP32-WROOM-32E、ESP32-WROOM-32D，任何使�
 
 ## Amiibo
 
-Amiibo 内置了一个Mipha的，最多可以存储10个，通过手柄设置进行设置
+Amiibo 内置了一个Mipha的，最多可以存储20个，通过手柄设置进行设置
 
-![image-20220914001736040](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202209140017073.png)
+![image-20221004034703372](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202210040347422.png)
 
-Amiibo的bin文件需要你自己下载，群文件就有，放在伊机控下的Amiibo文件夹中
+默认Amiibo是自动生成的，不需要你自己下载。**如果自动生成的Amiibo没有你要的**，你可以找到对应的bin，放在伊机控下的Amiibo文件夹中，然后**游戏选择自定义**，然后选择你的bin
 
 
 
@@ -163,12 +165,12 @@ Amiibo的bin文件需要你自己下载，群文件就有，放在伊机控下�
 
 ```
 【Amiibo切换】
-语法： AMIIBO 序号(序号范围0-9)
+语法： AMIIBO 序号(序号范围0-19)
 
 示例：
 # 循环切换amiibo
-FOR $3 = 0 TO 10
-    AMIIBO $3 # 从0-9号切换Amiibo
+FOR $3 = 0 TO 19
+    AMIIBO $3 # 从0-19号切换Amiibo
 NEXT
 # 切换固定amiibo序号
 AMIIBO 3 # 激活3号amiibo
